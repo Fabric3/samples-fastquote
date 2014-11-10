@@ -63,7 +63,7 @@ public class ProviderComponent implements Runnable {
     @Property(required = false)
     protected int waitTime = 1;
 
-    @Producer(target = "ProviderChanel")
+    @Producer(target = "ProviderChannel")
     protected ProviderChanel providerChannel;
 
     @Destroy

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns="urn:fabric3.org">
     <runtime port.range="1090-1190"/>
+    <domain autowire="on"/>
     <web.server>
         <http port="8182"/>
     </web.server>

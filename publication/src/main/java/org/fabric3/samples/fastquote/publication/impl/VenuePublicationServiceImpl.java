@@ -49,6 +49,7 @@ import org.fabric3.samples.fastquote.price.Price;
 @Composite
 @Component(composite = "{urn:fastquote.org}PublicationComposite")
 public class VenuePublicationServiceImpl implements VenuePublicationService {
+
     @Producer(target = "VenueChannel")
     protected VenueChannel venueChannel;
 
