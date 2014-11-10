@@ -1,41 +1,37 @@
-Fabric3 Sample Applications
-============================
+Fabric3 FastQuote Sample Application
+====================================
 
 Introduction
 ----------------
-The samples are intended to demonstrate capabilities of the Fabric3 runtime:
+ This sample provides an overview of how to build event-based systems with Fabric3. FastQuote is a fictitious financial institution that provides foreign
+ exchange trading to its clients.
 
-* Starter Applications - These applications demonstrate how to develop basic distributed applications using Fabric3. It is recommended users begin with
-  these applications.
+Topics Demonstrated
+--------------------
+* Event-driven design with Fabric3
+* Asynchronous programming with Fabric3
+* High performance messaging using ZeroMQ with Fabric3
+* System modularity, packaging and deployment with Fabric3
 
-* Feature Applications - These applications demonstrate using specific Fabric3 features.
-
-* BigBank Loan Application - BigBank showcases advanced features of the Fabric3 runtime. It is intended to provide a complete, real-world application
-  that demonstrates SCA and Fabric3 best-practices.
-
-* FastQuote FX Trading Application - FastQuote demonstrates how to build low-latency applications with Fabric3 and makes use of features such as ZeroMQ
-pub/sub communications and Disruptor integration.
-
-* Policy Applications - Demonstrate how to create and apply custom policies in Fabric3.
 
 Prerequisites
 ----------------
 
 * JDK 7.0 or later
 
-* Maven 3.0.4 or later to build the samples. Maven can be downloaded from http://maven.apache.org/download.html.
+* Maven 3.1.1 or later to build the samples. Maven can be downloaded from http://maven.apache.org/download.html.
+
 
 Installation
 ----------------
 
 * To build the samples, execute the following command from the top level directory:
 
-	mvn clean install
-
-* The samples also contain an automated build for assembling a single-VM runtime as well as a set of runtimes that form a multi-clustered domain.
-  To automatically download and build the runtimes, execute the following command from the /servers directory:
 
 	mvn clean install
+
+  _Be sure to ensure ports 8181, 12001, 13001 are available as they are required for remote transports enabled by the application._
+
 
 Documentation
 ----------------
