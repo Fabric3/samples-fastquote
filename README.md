@@ -30,7 +30,7 @@ Installation
 
 	mvn clean install
 
-  _Be sure to ensure ports 8181, 12001, 13001 are available as they are required for remote transports enabled by the application._
+  _Be sure to ensure ports 8181, 8182, 12001, 13001 are available as they are required for remote transports enabled by the application._
 
 
 Documentation

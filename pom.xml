@@ -49,6 +49,8 @@
         <module>pricing</module>
         <module>aggregation</module>
         <module>provider</module>
+        <module>servers/pe</module>
+        <module>servers/provider</module>
     </modules>
 
     <dependencies>
