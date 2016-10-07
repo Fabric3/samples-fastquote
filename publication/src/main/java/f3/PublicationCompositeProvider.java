@@ -4,8 +4,8 @@ import javax.xml.namespace.QName;
 
 import org.fabric3.api.annotation.model.Provides;
 import org.fabric3.api.model.type.builder.CompositeBuilder;
-import org.fabric3.api.model.type.builder.RingBufferChannelDefinitionBuilder;
-import org.fabric3.api.model.type.component.ChannelDefinition;
+import org.fabric3.api.model.type.builder.RingBufferChannelBuilder;
+import org.fabric3.api.model.type.component.Channel;
 import org.fabric3.api.model.type.component.Composite;
 
 /**
@@ -17,7 +17,7 @@ public class PublicationCompositeProvider {
     @Provides
     public static Composite createComposite() {
         // Creates a channel using the disruptor.
-        ChannelDefinition channel = RingBufferChannelDefinitionBuilder.newBuilder("VenueChannel").build();
+        Channel channel = RingBufferChannelBuilder.newBuilder("VenueChannel").build();
         return CompositeBuilder.newBuilder(COMPOSITE).channel(channel).deployable().build();
     }
 }

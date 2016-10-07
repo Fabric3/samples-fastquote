@@ -5,11 +5,11 @@ import java.util.Collections;
 import java.util.List;
 
 import org.fabric3.api.annotation.model.Provides;
-import org.fabric3.api.binding.zeromq.builder.ZeroMQBindingDefinitionBuilder;
-import org.fabric3.api.binding.zeromq.model.ZeroMQBindingDefinition;
-import org.fabric3.api.model.type.builder.ChannelDefinitionBuilder;
+import org.fabric3.api.binding.zeromq.builder.ZeroMQBindingBuilder;
+import org.fabric3.api.binding.zeromq.model.ZeroMQBinding;
+import org.fabric3.api.model.type.builder.ChannelBuilder;
 import org.fabric3.api.model.type.builder.CompositeBuilder;
-import org.fabric3.api.model.type.component.ChannelDefinition;
+import org.fabric3.api.model.type.component.Channel;
 import org.fabric3.api.model.type.component.Composite;
 
 /**
@@ -26,10 +26,10 @@ public class ProviderCompositeProvider {
         return compositeBuilder.deployable().build();
     }
 
-    private static ChannelDefinition createProviderChannel() {
-        ChannelDefinitionBuilder builder = ChannelDefinitionBuilder.newBuilder("ProviderChannel");
+    private static Channel createProviderChannel() {
+        ChannelBuilder builder = ChannelBuilder.newBuilder("ProviderChannel");
         List<String> addresses = Collections.singletonList(PROVIDER_CHANNEL_ADDRESS);
-        ZeroMQBindingDefinition binding = ZeroMQBindingDefinitionBuilder.newBuilder().address(addresses).build();
+        ZeroMQBinding binding = ZeroMQBindingBuilder.newBuilder().address(addresses).build();
         builder.binding(binding);
         return builder.build();
     }
